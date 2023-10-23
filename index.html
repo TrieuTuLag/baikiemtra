@@ -9,11 +9,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var commentForm = document.getElementById("commentForm");
-            var emailField = document.getElementById("email"); // Sửa tại đây
-            var ratingField = document.getElementById("rating"); // Sửa tại đây
+            var emailField = document.getElementById("email"); 
+            var ratingField = document.getElementById("rating"); 
 
             commentForm.addEventListener("submit", function(event) {
-                // Validate bỏ trống Email và Rating
+           
                 if (emailField.value.trim() === "") {
                     alert("Email không được để trống");
                     event.preventDefault();
@@ -24,13 +24,13 @@
                     event.preventDefault();
                 }
 
-                // Validate Rating phải là số
+            
                 if (isNaN(ratingField.value)) {
                     alert("Rating phải là một số");
                     event.preventDefault();
                 }
 
-                // Validate Email đúng định dạng
+            
                 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
                 if (!emailPattern.test(emailField.value)) {
                     alert("Email không hợp lệ");
